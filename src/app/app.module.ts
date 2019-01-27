@@ -4,12 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireStorageModule } from '@angular/fire/storage';
+
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 // Instructions ---->
 // Replace configPlaceholder with your firebase credentials
@@ -20,12 +19,10 @@ import configPlaceholder from '../env';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule,
     AngularFireModule.initializeApp(configPlaceholder),
-    AngularFirestoreModule,
     AngularFireAuthModule,
-    AngularFireStorageModule,
-    HttpClientModule
+    AngularFireDatabaseModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
