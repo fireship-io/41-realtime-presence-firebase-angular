@@ -1,0 +1,9 @@
+<div *ngIf="presence$ | async as presence" class="tag is-large" 
+      [ngClass]="{
+          'is-success':  presence.status  === 'online',
+          'is-warning': presence.status  === 'away',
+          'is-danger':  presence.status  === 'offline'
+      }"
+>
+  {{ presence.status }}
+</div>

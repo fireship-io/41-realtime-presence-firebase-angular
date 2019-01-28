@@ -1,9 +1,6 @@
-# Base | Angular + Firebase 
+# Realtime User Presence | Angular + Firebase 
 
-Foundation for Angular/Firebase lessons.
-
-- @angular/fire + Firebase
-- User Auth
+Realtime user presence with Angular/Firebase. [Full Lesson](https://fireship.io/lessons/realtime-presence-angular-firebase/)
 
 ## Setup
 

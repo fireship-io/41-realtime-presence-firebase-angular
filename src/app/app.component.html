@@ -1,16 +1,21 @@
-<h1>Base</h1>
-
 <div *ngIf="auth.user$ | async as user; else login">
-  <pre>
-    {{ user | json }}
-  </pre>  
+    <h4>Logged in as {{ user.displayName }}</h4>
+    <app-user [uid]="user.uid"></app-user>
   <hr>
-  <button class="button" (click)="auth.signOut()">Sign Out</button>
+  <button class="button" (click)="presence.signOut()">Sign Out</button>
 
 </div>
 
 <ng-template #login>
   <button class="button" (click)="auth.googleSignIn()">Login with Google</button>
 </ng-template>
+
+<hr>
+
+
+<h4>Jeff's Status</h4>
+<img src="https://avatars1.githubusercontent.com/u/10172199?s=460&v=4" width="100px" style="display: block; margin: auto;">
+<app-user uid="mB6sGaFBczfIW50DJyvGDcQWOvW2"></app-user>
+
 
 <router-outlet></router-outlet>

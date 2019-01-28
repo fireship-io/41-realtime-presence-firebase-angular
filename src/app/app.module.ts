@@ -13,9 +13,10 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 // Instructions ---->
 // Replace configPlaceholder with your firebase credentials
 import configPlaceholder from '../env';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, UserComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
